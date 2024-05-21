@@ -6,13 +6,11 @@ import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Shop from './Pages/Shop/Shop';
 import Blog from './Pages/Blog/Blog';
-import Sign from './Pages/Sign/Sign';
-import Cart from './Pages/Cart/Cart';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/'>
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
