@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Categories {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* background-color: red; */
+    gap: 30px;
+
+
+    &>div:first-child {
+        width: 370px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+
+        input {
+            width: 100%;
+            padding: 10px 30px;
+            outline: none;
+            font-size: 18px;
+            border: none;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.217);
+            transition: .4s;
+
+            &:hover{
+                color: black;
+            }
+        }
+
+        &:first-child {
+            width: 100%;
+            gap: 0;
+            border: 1px solid rgba(0, 0, 0, 0.078);
+        }
+
+    }
+
+
+    img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        background-position: center;
+
+    }
+
+}
+
+.Category_Box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    div{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+
+        p {
+            width: 90%;
+            text-align: left;
+            line-height: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(54, 54, 54);
+            transition: .4s;
+
+            &:hover {
+                color: black;
+            }
+        }
+        ul {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+    
+    
+            a {
+                padding: 0px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+@media(min-width:1024px) and (max-width:1200px){
+    .Categories{
+        width: 68%;
+
+        &>div{
+            width: 100%;
+
+            &:nth-child(2){
+                height: 900px;
+
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .Category_Box{
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &>div{
+            width: auto;
+            height: auto; 
+            padding: 20px;          
+         /* box-shadow:  0 15px 20px 0 rgba(0, 0, 0, 0.31); */
+
+            ul{
+                gap: 20px;
+            }
+        }
+    } 
+}
+
+@media(min-width:768px) and (max-width:1024px){
+    .Categories{
+        width: 100%;
+        padding: 30px;
+
+        &>div{
+            width: 100%;
+
+            &:nth-child(2){
+                height: 900px;
+
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .Category_Box{
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &>div{
+            width: auto;
+            height: auto; 
+            padding: 20px;          
+         /* box-shadow:  0 15px 20px 0 rgba(0, 0, 0, 0.31); */
+
+            ul{
+                gap: 20px;
+            }
+        }
+    } 
+}
+
+
+@media(min-width:552px) and (max-width:768px){
+    .Categories{
+        width: 100%;
+        padding: 30px;
+
+        &>div{
+            width: 100%;
+
+            &:nth-child(2){
+                height: 400px;
+
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .Category_Box{
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &>div{
+            width: auto;
+            height: auto; 
+            padding: 20px;          
+    
+
+            ul{
+                gap: 20px;
+            }
+        }
+    } 
+}

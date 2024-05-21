@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Banner_Box_Container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Banner_Box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 20px;
+
+  .Banner {
+    width: 600px;
+    padding: 100px 20px;
+    height: 450px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .4s;
+    opacity: 0;
+    animation: show2 .6s ease-in-out forwards;
+
+
+    &:hover {
+      background-size: 105%;
+    }
+
+    &:first-child {
+      animation-delay: .300s;
+      background-image: url(https://qi67.qodeinteractive.com/wp-content/uploads/2021/06/h1-img3.jpg);
+    }
+
+    &:nth-child(2) {
+      animation-delay: .600s;
+      background-image: url(https://qi67.qodeinteractive.com/wp-content/uploads/2021/06/h1-img4.jpg);
+    }
+
+    &:last-child {
+      animation-delay: .900s;
+      background-image: url(https://qi67.qodeinteractive.com/wp-content/uploads/2021/06/h1-img5.jpg);
+    }
+
+    .Banner_Info {
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 5px;
+
+      p {
+        text-align: start;
+        color: #666;
+      }
+
+      button {
+        position: relative;
+        padding: 10px 0;
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        cursor: pointer;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 100%;
+          content: '';
+          background-color: black;
+          width: 0;
+          height: 1px;
+          transition: .4s;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes show2 {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width:1024px) and (max-width:1200px) {
+  .Banner_Box {
+    padding: 0;
+  }
+
+  .Banner {
+    padding: 50px 20px;
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .Banner_Box {
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .Banner_Box>.Banner {
+    width: 100%;
+    height: 350px;
+    padding: 50px 20px;
+  }
+
+  .Banner_Box>.Banner>.Banner_Info {
+    width: 40%;
+    transform: translateY(50px);
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width:552px) and (max-width:768px) {
+  .Banner_Box {
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .Banner_Box>.Banner {
+    width: 100%;
+    height: 300px;
+    padding: 50px 20px;
+  }
+
+  .Banner_Box>.Banner>.Banner_Info {
+    width: 40%;
+    transform: translateY(50px);
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width:320px) and (max-width:552px) {
+  .Banner_Box {
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .Banner_Box>.Banner {
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+  }
+
+  .Banner_Box>.Banner>.Banner_Info {
+    width: 100%;
+    backdrop-filter: blur(10px);
+
+    p {
+      color: black;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}

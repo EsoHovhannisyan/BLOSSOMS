@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.Blogs{
+    width: 100%;
+    height: 140px;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 0 330px;
+    align-items: center;
+
+    h1{
+        font-size: 35px;
+        letter-spacing: 3px;
+        color: rgba(0, 0, 0, 0.818);
+    }
+}
+
+@media(min-width:320px) and (max-width:768px){
+    .Blogs{
+        padding: 0 60px;
+    }
+}

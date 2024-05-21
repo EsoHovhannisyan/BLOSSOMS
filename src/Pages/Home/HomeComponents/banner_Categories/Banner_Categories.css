@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Banner_Category_Container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:100px 20px 0 20px;
+    gap: 15px;
+
+    a{
+        width: 50%;
+        height: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: .4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        scale: 0;
+        animation: show .6s ease-in-out forwards;
+        
+        
+        &:hover{
+            background-size: 105%;
+        }
+
+        &:first-child{
+            animation-delay: .100s;
+            background-image: url(https://qi67.qodeinteractive.com/wp-content/uploads/2021/06/h1-img1.jpg);
+        }
+        &:last-child{
+            animation-delay: .200s;
+            background-image: url(https://qi67.qodeinteractive.com/wp-content/uploads/2021/06/h1-img2.jpg);
+        }
+
+        &:first-child::before{
+            content: 'Women';
+            width: 20%;
+            padding: 15px;
+            font-size: 16px;
+            background-color: white;
+            position: absolute;
+        }
+        &:last-child::before{
+            content: 'Men';
+            width: 20%;
+            padding: 15px;
+            font-size: 16px;
+            background-color: white;
+            position: absolute;
+        }
+    }
+}
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.Banner_Category_Container button{
+    font-size: 16px;
+    padding: 10px 70px;
+    font-weight: 600;
+}
+
+
+@media (min-width:1024px) and (max-width:1200px){
+    .Banner_Category_Container{
+        height: 400px;
+
+        a:first-child::before,a:last-child::before{
+            font-size: 12px; 
+        }
+    }
+   
+}
+@media (min-width:768px) and (max-width:1024px){
+    .Banner_Category_Container{
+        height: 500px;
+    }
+
+}
+@media (min-width:552px) and (max-width:768px){
+    .Banner_Category_Container{
+        height: 400px;
+    }
+}
+@media (min-width:320px) and (max-width:552px){
+    .Banner_Category_Container{
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+
+        a{
+            width: 100%;
+            height: 200px;
+        }
+    }
+}
+
+
+
+
+

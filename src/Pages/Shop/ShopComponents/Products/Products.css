@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Product_Container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: green; */
+    gap: 15px;
+    padding: 0 0 100px 0;
+
+
+
+    .Product_Box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* background-color: red; */
+        gap: 15px;
+        padding: 0;
+
+
+        .Product {
+            width: 300px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* background-color: orange; */
+
+            &:hover img {
+                scale: 1;
+
+            }
+
+            .Product_Img {
+                width: 100%;
+                height: 400px;
+                position: relative;
+
+
+                &:hover&>div:last-child {
+                    opacity: 1;
+                }
+
+                &>div:last-child {
+                    position: absolute;
+                    z-index: 2;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(0, 0, 0, 0.152);
+                    opacity: 0;
+                    top: 0;
+                    transition: .4s;
+
+                    button {
+                        padding: 10px 25px;
+                        font-size: 20px;
+                        background-color: black;
+                        color: white;
+                        border: 2px solid transparent;
+                        transition: .4s;
+                        cursor: pointer;
+
+                        &:hover {
+                            border: 2px solid black;
+                            background-color: white;
+                            color: black;
+                        }
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .Product_Info {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                div{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                }
+                /* gap: 15px; */
+
+                h4 {
+                    color: rgba(0, 0, 0, 0.668);
+                }
+
+                .Oldprice {
+                    text-decoration: line-through;
+
+                }
+
+            }
+        }
+    }
+}
+
+.Select_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding: 40px 60px;
+
+
+    .Select_Box {
+        width: 350px;
+        height: auto;
+        flex-direction: column;
+        padding: 10px 30px;
+        outline: none;
+        color: gray;
+        border-color: gray;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+
+        &>div {
+            width: 100%;
+
+            &:first-child {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                border: 2px solid rgba(128, 128, 128, 0.259);
+                cursor: pointer;
+
+                svg {
+                    transition: .4s;
+                    transform: rotate(0);
+
+                    &.showrotate {
+                        transform: rotate(180deg);
+                    }
+
+                    &.hiderotate {
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+
+        .close {
+            display: none;
+        }
+
+        .Select {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border: 2px solid rgba(128, 128, 128, 0.259);
+
+            ul {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 5px;
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        /* background-color: red; */
+                        color: gray;
+                        text-decoration: none;
+                        text-align: left;
+                        transition: .4s;
+                        padding: 10px 20px;
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media(min-width:320px) and (max-width:1200px) {
+    .Product_Container {
+        width: 100%;
+    }
+
+    .Product_Container>.Product_Box>.Product {
+        width: 250px;
+        height: 400px;
+    }
+}
+
+@media(min-width:320px) and (max-width:1024px) {
+    .Select_Container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .Select_Box {
+            position: static;
+        }
+    }
+}

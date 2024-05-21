@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Contact_Info_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 150px;
+    gap: 35px;
+    
+}
+
+.Contact_Info_Box div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Contact_Info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+
+    h3 {
+        color: rgba(0, 0, 0, 0.754);
+    }
+
+    span {
+        color: rgba(0, 0, 0, 0.754);
+    }
+
+    a {
+        color: rgba(0, 0, 0, 0.754);
+        text-decoration: none;
+        position: relative;
+        transition: .4s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            width: 0;
+            height: 0.2px;
+            background-color: black;
+            transition: .54s;
+            left: 0;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+
+}
+
+.Message_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    
+
+
+    div{
+        display: flex;
+        gap: 22px;
+        /* padding: 20px 0; */
+    }
+
+    h3{
+        color:  rgba(0, 0, 0, 0.754);
+    }
+    textarea{
+        width: 100%;
+        height: 150px;
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+
+    input{
+        width: 100%;
+        height: 50px;
+        padding: 30px 10px;
+        
+        
+    }
+    button{
+        padding: 10px 50px;
+        font-size: 18px;
+        background-color: black;
+        color: white;
+        transition: 0.54s;
+
+
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+@media(min-width:1024px) and (max-width:1200px){
+    .Contact_Info_Box{
+        flex-direction: column;
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px){
+    .Contact_Info_Box{
+        padding: 30px 100px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Message_Box div{
+        gap: 36px;
+    }
+}
+
+
+@media(min-width:552px) and (max-width:768px){
+    .Contact_Info_Box{
+        padding: 50px;
+        flex-direction: column;
+    }
+    .Contact_Info_Box div{
+        width: 400px;
+        gap: 20px;
+    }
+}
+
+@media(min-width:320px) and (max-width:552px){
+.Contact_Info_Box{
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 75px;
+}
+
+.Contact_Info_Box div{
+    gap: 25px;
+}
+
+.Message_Box div{
+    gap: 20px;
+}
+}
+
+
+

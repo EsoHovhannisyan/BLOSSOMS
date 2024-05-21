@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
+    background-color: white;
+
+    &>div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+    button{
+        position: absolute;
+        right: 5%;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        font-size: 26px;
+        cursor: pointer;
+        border: 2px solid black;
+        background-color: transparent;
+        display: none;
+    }
+}
+
+.Logo {
+    width: 150px;
+    height: 60px;
+    background-image: url(https://qi67.qodeinteractive.com/wp-content/uploads/2020/11/logo-img.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Contact_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: #222222;
+    padding: 10px 20px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+
+        p {
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 5px 20px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                width: 0;
+                height: 0.2px;
+                background-color: white;
+                transition: .4s;
+                left: 0;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+
+
+        /* background-color: red; */
+    }
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+ul {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    li {
+        list-style: none;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        font-size: 14px;
+        font-weight: 500;
+
+        button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            font-size: 20px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            width: 0;
+            height: 0.2px;
+            background-color: black;
+            transition: .4s;
+            left: 0;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 5px 20px;
+        }
+    }
+}
+
+.Last_ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 100px 20px;
+    gap: 15px;
+}
+
+.Links {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+
+    &:first-child{
+        width: 400px;
+    }
+
+    p {
+        text-align: left;
+        color: white;
+    }
+
+    span {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        color: white;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    h3 {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    &>div {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &:first-child ul {
+        flex-direction: row;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+
+        li {
+            &::before {
+                background-color: white;
+            }
+
+            a {
+                padding: 0;
+                color: white;
+            }
+        }
+
+
+    }
+}
+
+
+@media (min-width:1024px) and (max-width:1200px) {
+    ul {
+        gap: 0;
+    }
+
+    .Links {
+        width: 370px;
+    }
+}
+
+@media (min-width:320px) and (max-width:1024px) {
+    .Contact_Box {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    header{
+        flex-direction: column;
+
+        div{
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+        button{
+            display: block;
+        }
+        nav{
+            overflow: hidden;
+            height: 0;
+            transition: .4s;
+            opacity: 0;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 999999999;
+        }
+    }
+    .Last_ul{
+        display: none;
+    }
+
+    .isOpen{
+        height:200px;
+        transition: .4s;
+        opacity: 1;
+        background-color: white;
+    }
+    .Close{
+        opacity: 0;
+        height: 0;
+        transition: .4s;
+    }
+    footer{
+        justify-content: flex-start;
+        gap: 40px 0;
+    }
+    .Links {
+        padding: 0;
+    }
+}
