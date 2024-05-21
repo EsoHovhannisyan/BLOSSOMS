@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BLOSSOMS/static/css/main.b0a58bde.css",
+    "main.js": "/BLOSSOMS/static/js/main.c4c7746c.js",
+    "static/js/453.ed3810f9.chunk.js": "/BLOSSOMS/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/BLOSSOMS/index.html",
+    "main.b0a58bde.css.map": "/BLOSSOMS/static/css/main.b0a58bde.css.map",
+    "main.c4c7746c.js.map": "/BLOSSOMS/static/js/main.c4c7746c.js.map",
+    "453.ed3810f9.chunk.js.map": "/BLOSSOMS/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0a58bde.css",
+    "static/js/main.c4c7746c.js"
+  ]
+}
