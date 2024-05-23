@@ -10,7 +10,7 @@ import Blog from './Pages/Blog/Blog';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename='/Home'>
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
