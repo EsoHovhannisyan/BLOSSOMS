@@ -10,7 +10,6 @@ import NoPage from "./Pages/NoPage/NoPage";
 
 function App() {
   return (
-    <div className="App">
       <BrowserRouter basename='/'>
         <Routes>
           <Route path='/' element={<Layout />}>
@@ -25,7 +24,6 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 export default App;
