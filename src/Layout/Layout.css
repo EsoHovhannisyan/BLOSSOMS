@@ -173,6 +173,11 @@ footer {
     padding: 100px 20px;
     gap: 15px;
 }
+.Social_Links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .Links {
     width: auto;
@@ -213,13 +218,6 @@ footer {
         color: white;
     }
 
-    &>div {
-        width: 100%;
-        padding: 0;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
 
     &:first-child ul {
         flex-direction: row;
@@ -236,17 +234,21 @@ footer {
             &::before {
                 background-color: white;
             }
-
-            a {
-                padding: 0;
-                color: white;
-            }
         }
-
-
     }
 }
-
+.Links a{
+    color:white;
+    text-decoration: none;
+    padding: 0;
+}
+.Links>div {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 @media (min-width:1024px) and (max-width:1200px) {
     ul {
