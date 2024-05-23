@@ -36,7 +36,7 @@ const Layout = () => {
                     <nav className={open ? 'Close' : 'isOpen'}>
                         <ul>
                             <li>
-                                <Link onClick={isOpen} to='/Home'>HOME</Link>
+                                <Link onClick={isOpen} to='/'>HOME</Link>
                             </li>
                             <li>
                                 <Link onClick={isOpen} to='/About'>ABOUT US</Link>
