@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.NoPage {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    padding: 250px 0;
+    opacity: 0;
+    animation: back 0.5s ease-in-out forwards;
+    animation-delay: .150s;
+
+    h1 {
+        font-size: 150px;
+        opacity: 0;
+        animation: text 0.5s ease-in-out forwards;
+        animation-delay: .850s;
+        color: white;
+        text-shadow: 1px 1px 1px #919191,
+            1px 2px 1px #919191,
+            1px 3px 1px #919191,
+            1px 4px 1px #919191,
+            1px 5px 1px #919191,
+            1px 6px 1px #919191,
+            1px 7px 1px #919191,
+            1px 8px 1px #919191,
+            1px 9px 1px #919191,
+            1px 10px 1px #919191,
+            1px 18px 6px rgba(16, 16, 16, 0.4),
+            1px 22px 10px rgba(16, 16, 16, 0.2),
+            1px 25px 35px rgba(16, 16, 16, 0.2),
+            1px 30px 60px rgba(16, 16, 16, 0.4);
+    }
+}
+
+@keyframes text {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes back {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

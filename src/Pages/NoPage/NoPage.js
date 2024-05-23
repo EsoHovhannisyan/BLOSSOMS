@@ -1,5 +1,11 @@
-const NoPage = () => {
-    return <h1>Page Not Found</h1>
+
+import './NoPage.css'
+
+export default function NoPage() {
+    return (
+        <div className="NoPage">
+            <h1>Page Not Found</h1>
+        </div>
+    )
 }
 
-export default NoPage
